@@ -17,17 +17,17 @@ jobs:
         if: ${{ vars.DESTINATION_REPOSITORY }}
         runs-on: ubuntu-22.04
         steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
               with:
-                node-version: '18'
+                node-version: '20'
 
             - run: corepack enable npm
 
             # https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows#example-using-the-cache-action
             - name: Cache node modules
               id: cache-npm
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               env:
                 cache-name: cache-node-modules
               with:
@@ -46,7 +46,7 @@ jobs:
 
             - run: npm ci
             - run: npm run build
-            - uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
+            - uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
               with:
                 deploy_key: ${{ secrets.DESTINATION_REPOSITORY_DEPLOY_KEY }}
                 external_repository: ${{ vars.DESTINATION_REPOSITORY }}
