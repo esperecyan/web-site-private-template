@@ -22,6 +22,8 @@ jobs:
               with:
                 node-version: '18'
 
+            - run: corepack enable npm
+
             # https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows#example-using-the-cache-action
             - name: Cache node modules
               id: cache-npm
