@@ -1,7 +1,8 @@
-import {fileURLToPath} from 'url';
-import path from 'path';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
-const dirname = path.dirname(fileURLToPath(import.meta.url));
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 /** @type {import('webpack').Configuration} */
 export default {
