@@ -5,6 +5,7 @@
 			"source.fixAll": "explicit"
 		}
 	},
+	"eslint.format.enable": true,
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.tsdk": "./node_modules/typescript/lib"
 }
