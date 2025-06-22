@@ -5,6 +5,7 @@
 			"source.fixAll": "explicit"
 		}
 	},
+	"editor.rulers": [120],
 	"eslint.format.enable": true,
 	"eslint.rules.customizations": [
 		{"rule": "@stylistic/*", "severity": "off"},
