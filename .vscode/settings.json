@@ -6,6 +6,13 @@
 		}
 	},
 	"eslint.format.enable": true,
+	"eslint.rules.customizations": [
+		{"rule": "@stylistic/*", "severity": "off"},
+		{"rule": "@stylistic/max-len", "severity": "default"},
+		{"rule": "@stylistic/max-statements-per-line", "severity": "default"},
+		{"rule": "@stylistic/no-mixed-operators", "severity": "default"},
+		{"rule": "@stylistic/no-mixed-spaces-and-tabs", "severity": "default"}
+	],
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.tsdk": "./node_modules/typescript/lib"
 }
